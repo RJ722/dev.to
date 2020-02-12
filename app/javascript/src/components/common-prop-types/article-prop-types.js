@@ -34,4 +34,6 @@ export const articlePropTypes = PropTypes.shape({
   }),
   organization: organizationPropType,
   _snippetResult: articleSnippetResultPropTypes,
+  positive_reactions_count: PropTypes.number,
+  reactions_count: PropTypes.number,
 });
