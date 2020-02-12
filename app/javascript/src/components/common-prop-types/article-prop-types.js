@@ -2,6 +2,17 @@ import PropTypes from 'prop-types';
 import { tagPropTypes } from './tag-prop-types';
 import { organizationPropType } from './organization-prop-type';
 
+export const articleSnippetResultPropTypes = PropTypes.shape({
+  body_text: PropTypes.shape({
+    matchLevel: PropTypes.oneOf(['none']),
+    value: PropTypes.string.isRequired,
+  }),
+  comments_blob: PropTypes.shape({
+    matchLevel: PropTypes.oneOf(['none']),
+    value: PropTypes.string.isRequired,
+  }),
+});
+
 export const articlePropTypes = PropTypes.shape({
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
@@ -22,14 +33,5 @@ export const articlePropTypes = PropTypes.shape({
     name: PropTypes.string.isRequired,
   }),
   organization: organizationPropType,
-  _snippetResult: PropTypes.shape({
-    body_text: PropTypes.shape({
-      matchLevel: PropTypes.oneOf(['none']),
-      value: PropTypes.string.isRequired,
-    }),
-    comments_blob: PropTypes.shape({
-      matchLevel: PropTypes.oneOf(['none']),
-      value: PropTypes.string.isRequired,
-    }),
-  }),
+  _snippetResult: articleSnippetResultPropTypes,
 });
