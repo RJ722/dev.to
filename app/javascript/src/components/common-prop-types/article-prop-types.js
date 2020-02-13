@@ -18,6 +18,7 @@ export const articlePropTypes = PropTypes.shape({
   title: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired,
   cloudinary_video_url: PropTypes.string,
+  video_duration_in_minutes: PropTypes.number,
   type_of: PropTypes.oneOf(['podcast_episodes']),
   class_name: PropTypes.oneOf(['PodcastEpisode', 'User', 'Article']),
   tag_list: PropTypes.arrayOf(tagPropTypes), // Is it the same prop types as tagPropTypes?
