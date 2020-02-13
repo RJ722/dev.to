@@ -21,8 +21,9 @@ export const articlePropTypes = PropTypes.shape({
   video_duration_in_minutes: PropTypes.number,
   type_of: PropTypes.oneOf(['podcast_episodes']),
   class_name: PropTypes.oneOf(['PodcastEpisode', 'User', 'Article']),
-  tag_list: PropTypes.arrayOf(tagPropTypes), // Is it the same prop types as tagPropTypes?
-  cached_tag_list_array: PropTypes.arrayOf(tagPropTypes), // Is it the same prop types as tagPropTypes?
+  flare_tag: tagPropTypes,
+  tag_list: PropTypes.arrayOf(PropTypes.string),
+  cached_tag_list_array: PropTypes.arrayOf(PropTypes.string),
   podcast: PropTypes.shape({
     slug: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
@@ -37,4 +38,5 @@ export const articlePropTypes = PropTypes.shape({
   _snippetResult: articleSnippetResultPropTypes,
   positive_reactions_count: PropTypes.number,
   reactions_count: PropTypes.number,
+  comments_count: PropTypes.number,
 });
