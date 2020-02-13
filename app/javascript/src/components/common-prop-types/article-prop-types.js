@@ -4,11 +4,11 @@ import { organizationPropType } from './organization-prop-type';
 
 export const articleSnippetResultPropTypes = PropTypes.shape({
   body_text: PropTypes.shape({
-    matchLevel: PropTypes.oneOf(['none']),
+    matchLevel: PropTypes.oneOf(['full', 'none']),
     value: PropTypes.string.isRequired,
   }),
   comments_blob: PropTypes.shape({
-    matchLevel: PropTypes.oneOf(['none']),
+    matchLevel: PropTypes.oneOf(['full', 'none']),
     value: PropTypes.string.isRequired,
   }),
 });
