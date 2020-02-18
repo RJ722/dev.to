@@ -1,5 +1,5 @@
 version = 1
 
 [[analyzers]]
-name = "ruby"
+name = "docker"
 enabled = true
